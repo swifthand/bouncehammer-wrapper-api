@@ -3,6 +3,7 @@ ruby '2.2.3'
 
 # Dependencies for primary logic
 gem 'sinatra', require: 'sinatra/base'
+gem 'json'
 
 # Developer Happiness
 gem 'activesupport', '~> 4.2.0'

@@ -39,6 +39,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport (~> 4.2.0)
   awesome_print
+  json
   minitest-reporters
   sinatra
   turn-again-reporter

@@ -14,5 +14,19 @@ module BounceHammerAPI
 
     use Rack::Deflater
 
+
+    get '/data/recent/:number/?:unit' do
+      content_type :json
+      DataDumper.new({
+        'howrecent' => "#{params['number']}#{params['unit'] || ''}"
+      }).results
+    end
+
+
+    get '/data/*' do
+      args = ArgConvert.from_splat(params[:splat], values: DataDumper.value_args,  flags: DataDumper.flag_args)
+      DataDumper(args.to_h).results
+    end
+
   end
 end

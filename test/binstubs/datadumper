@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+# Herein we're going to fake datadumper for testing!
+
+require File.join(File.expand_path('../../..', __FILE__), 'app/data_dumper_options')
+
+options = BounceHammerAPI::DataDumperOptions.new.parse_cli!(ARGV)
+
+def fixture(filename)
+  File.read(File.join(File.expand_path('../', __FILE__), filename).strip)
+end
+
+options_without_format = (options.select { |k, v| k != 'format' })
+
+case options_without_format
+when { 'howrecent' => '7y' }
+  puts fixture('seven-year.json')
+when { 'howrecent' => '2d' }
+  puts ''
+when { 'howrecent' => '15y' }
+  puts fixture('all-example-data.json')
+else
+  puts ''
+end

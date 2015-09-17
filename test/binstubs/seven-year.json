@@ -1,0 +1,3 @@
+[
+  { "bounced": 1234567890, "addresser": "sender01@example.jp", "recipient": "user01@example.org", "senderdomain": "example.jp", "destination": "example.org", "reason": "userunknown", "hostgroup": "reserved", "provider": "rfc2606", "frequency": 1, "description": { "deliverystatus": "5.0.0", "diagnosticcode": "Example1", "timezoneoffset": "+0900" }, "token": "8dbb1b9ce9cc47eb6bb1316096c858cd" }
+]
