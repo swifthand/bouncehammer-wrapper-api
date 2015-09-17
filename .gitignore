@@ -1,0 +1,11 @@
+.DS_Store
+log/*.log
+tmp/**/*
+*.swp
+*.tmproj
+tmtags
+.project
+.bundle
+*.sublime-project
+*.sublime-workspace
+.env*
