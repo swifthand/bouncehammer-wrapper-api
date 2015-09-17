@@ -21,7 +21,7 @@ module BounceHammerAPI
 
 
     def cli_to_hash(args_array)
-      options.parse_cli!(cli_argstring)
+      options.parse_cli!(args_array)
     end
 
 
