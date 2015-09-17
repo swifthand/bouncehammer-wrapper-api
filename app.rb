@@ -24,8 +24,10 @@ module BounceHammerAPI
 
 
     get '/data/*' do
-      args = ArgConvert.from_splat(params[:splat], values: DataDumper.value_args,  flags: DataDumper.flag_args)
-      DataDumper(args.to_h).results
+      content_type :json
+      converter = ConvertsArgFormat.new(DataDumperOptions.new)
+      args_hash = converter.splat_to_hash(params[:splat])
+      DataDumper.new(args_hash).results
     end
 
   end
