@@ -18,6 +18,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    puma (2.14.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -41,6 +42,7 @@ DEPENDENCIES
   awesome_print
   json
   minitest-reporters
+  puma
   sinatra
   turn-again-reporter
 

@@ -10,6 +10,7 @@ module BounceHammerAPI
                       expire_after: 31557600, # aka one year
                       secure:       production?,
                       secret:       ENV['SINATRA_SESSION_SECRET']
+      set :server, :puma
     end
 
     use Rack::Deflater
